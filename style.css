@@ -1,0 +1,746 @@
+body {
+    margin: 0 auto;
+    position: absolute;
+    background-image: url(grafik/background-100.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: difference;
+    width: 100%;
+    height: 56.25vw;
+}
+
+img {
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    max-width: 80vw;
+    margin: 0 auto;
+
+}
+
+h1 {
+    color: white;
+    padding: 1rem;
+    font-family: helvetica;
+    font-size: 2rem;
+}
+
+p {
+    font-family: arial;
+    font-size: 1.1rem;
+    line-height: 1.7rem
+}
+
+
+.show {
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+#topnav {}
+
+#box {
+    background-color: #00d59d;
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    z-index: 2;
+}
+
+.knap {
+    background-color: black;
+    padding: 16px;
+    font-size: 16px;
+    width: 10vw;
+    z-index: 2;
+    border: none;
+}
+
+
+.knap a {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    width: 20vw;
+    border: none;
+    text-decoration: none;
+}
+
+.om {
+    position: fixed;
+    display: inline-block;
+    left: 15vw;
+    top: 1vw;
+    z-index: 2;
+}
+
+.om:hover .knap {
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+.om:hover .knap a {
+    color: black;
+
+}
+
+.om:hover .falde {
+    display: block;
+}
+
+.menu {
+    position: fixed;
+    display: inline-block;
+    left: 1vw;
+    top: 1vw;
+    z-index: 2;
+
+}
+
+.menu:hover .falde {
+    display: block;
+}
+
+.menu:hover .knap {
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+.menu:hover .knap a {
+    color: black;
+}
+
+
+.menu1 {
+    position: fixed;
+    display: inline-block;
+    right: 35vw;
+    top: 1vw;
+    z-index: 2;
+
+}
+
+.menu1:hover .falde {
+    display: block;
+}
+
+.menu1:hover .knap {
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+.menu1:hover .knap a {
+    color: black;
+}
+
+
+
+.menu2 {
+    position: fixed;
+    display: inline-block;
+    right: 25vw;
+    top: 1vw;
+    z-index: 2;
+
+
+}
+
+.menu2:hover .falde {
+    display: block;
+}
+
+.menu2:hover .knap {
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+.menu2:hover .knap a {
+    color: black;
+}
+
+.menu3 {
+    position: fixed;
+    display: inline-block;
+    right: 15vw;
+    top: 1vw;
+    z-index: 2;
+
+
+}
+
+.menu3:hover .falde {
+    display: block;
+}
+
+.menu3:hover .knap {
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+.menu3:hover .knap a {
+    color: black;
+}
+
+.menu4 {
+    position: fixed;
+    display: inline-block;
+    right: 5vw;
+    top: 1vw;
+    z-index: 2;
+
+}
+
+.menu4:hover .falde {
+    display: block;
+}
+
+.menu4:hover .knap {
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+.menu4:hover .knap a {
+    color: black
+}
+
+
+.falde {
+    display: none;
+    position: absolute;
+    background-color: gray;
+    z-index: 1;
+    width: 15vw;
+
+    animation-name: falde;
+    animation-duration: 0.3s;
+}
+
+.falde a {
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s ease;
+    border-bottom: 0.1rem solid white;
+
+
+}
+
+@keyframes falde {
+    0% {
+        opacity: 0;
+        /*        height: 100%;*/
+        transform: scaleY(0);
+    }
+
+    100% {
+        opacity: 1;
+        /*        height: 100%;*/
+        transform: scaleY(1);
+    }
+}
+
+.falde a:last-child {
+    border-bottom: none;
+}
+
+.falde a:hover {
+    background-color: #ddd;
+}
+
+@media screen and (min-width:712px) {
+    #topnav {
+        display: block;
+    }
+}
+
+@media screen and (max-width:712px) {
+    #pil {
+        background-image: url(grafik/Asset%201.svg);
+        position: fixed;
+        top: 10rem;
+        left: 37vw;
+        width: 2vw;
+        height: 2vw;
+        z-index: 3;
+        transform: rotate(135deg);
+    }
+
+
+    #burger {
+        display: inline-block;
+        position: fixed;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .burgeropen {
+        background-color: black;
+        height: 3.08rem;
+        width: 45vw;
+        display: inline-block;
+        position: fixed;
+        cursor: pointer;
+        z-index: 3;
+
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+        border-radius: 15px;
+    }
+
+    .change .bar1 {
+        background-color: white;
+        transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        background-color: white;
+        transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    .knap {
+        background-color: black;
+        padding: 16px;
+        font-size: 16px;
+        width: 45vw;
+        border: none;
+    }
+
+    .falde {
+        display: none;
+        position: relative;
+        background-color: gray;
+        z-index: -1;
+        top: -3.25rem;
+        width: 45vw;
+        left: 45vw;
+        animation-name: falde;
+        animation-duration: 0.3s;
+    }
+
+    #box {
+        display: none;
+    }
+
+    .om {
+        display: none;
+    }
+
+
+    .menu {
+        position: fixed;
+        left: 0;
+        height: 0;
+        width: 10vw;
+        top: 3.1rem;
+        z-index: 2;
+
+    }
+
+    .menu1 {
+        position: fixed;
+        left: 0;
+        height: 0;
+        width: 10vw;
+        top: 6.1rem;
+        z-index: 2;
+
+    }
+
+    .menu2 {
+        position: fixed;
+        right: 0;
+        left: 0;
+        height: 0;
+        width: 10vw;
+        top: 9.1rem;
+        z-index: 2;
+
+    }
+
+    .menu3 {
+        position: fixed;
+        left: 0;
+        top: 12.1rem;
+        height: 0;
+        width: 10vw;
+        z-index: 2;
+
+    }
+
+    .menu4 {
+        position: fixed;
+        left: 0;
+        top: 15.1rem;
+        height: 0;
+        width: 10vw;
+        z-index: 2;
+
+    }
+
+
+
+}
+
+#intro {
+    position: relative;
+    background-image: url(grafik/background%20lys-100.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 56.25vw;
+    left: 0;
+
+
+    z-index: 2;
+}
+
+.titel {
+    background-image: url(grafik/forside_titel.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 8vw;
+    left: 13.5vw;
+    width: 70vw;
+    height: 31vw;
+    z-index: 2;
+}
+
+#mig {
+    position: absolute;
+    top: 22vw;
+    left: -1vw;
+    z-index: 3;
+}
+
+#mig_sprite {
+    background-repeat: no-repeat;
+    width: 6vw;
+    height: 6vw;
+    background-image: url(grafik/mig_animation-100.jpg);
+    border: 1px solid #fe9492;
+    border-radius: 30px;
+}
+
+.flyv {
+    animation-name: flyv;
+    animation-duration: 3.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(18);
+    animation-fill-mode: both;
+
+}
+
+@keyframes flyv {
+    0% {
+        background-position: 0 0;
+        transform: translateX(0.1vw);
+        transform: translateY(0vw);
+    }
+
+    10% {
+        transform: translateX(7.2vw);
+    }
+
+    20% {
+        transform: translateX(14.3vw);
+    }
+
+
+    30% {
+        transform: translateX(21.4vw);
+    }
+
+    40% {
+        transform: translateX(28.5vw);
+    }
+
+
+    50% {
+        transform: translateX(35.6vw);
+    }
+
+    60% {
+        transform: translateX(42.7vw);
+    }
+
+    70% {
+        transform: translateX(49.8vw);
+    }
+
+    80% {
+        transform: translateX(56.9vw);
+    }
+
+    90% {
+        transform: translateX(64vw);
+    }
+
+    95% {
+        transform: translateX(64vw);
+        top: 22vw;
+        left: -1vw;
+
+    }
+
+    100% {
+        transform: translateX(64vw);
+        top: 24vw;
+        left: 2vw;
+
+        background-position: -1800% 0;
+    }
+}
+
+
+
+#mand {
+    position: absolute;
+    top: 20vw;
+    left: -7vw;
+
+}
+
+#mand_sprite {
+    background-size: 1800% 100%;
+    width: 17vw;
+    height: 20vw;
+    background-image: url(grafik/mig_walk.svg);
+
+}
+
+.walk {
+    animation-name: walk;
+    animation-duration: 3.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(18);
+    animation-fill-mode: both;
+
+}
+
+@keyframes walk {
+    0% {
+        background-position: 0 0;
+        transform: translateX(0.1vw);
+    }
+
+    10% {
+        transform: translateX(7.2vw);
+    }
+
+    20% {
+        transform: translateX(14.3vw);
+    }
+
+
+    30% {
+        transform: translateX(21.4vw);
+    }
+
+    40% {
+        transform: translateX(28.5vw);
+    }
+
+
+    50% {
+        transform: translateX(35.6vw);
+    }
+
+    60% {
+        transform: translateX(42.7vw);
+    }
+
+    70% {
+        transform: translateX(49.8vw);
+    }
+
+    80% {
+        transform: translateX(56.9vw);
+    }
+
+    90% {
+        transform: translateX(64vw)
+    }
+
+    100% {
+        transform: translateX(64vw);
+        background-position: -1800% 0;
+    }
+}
+
+
+
+
+
+.forsvind {
+    animation: forsind;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    transition: ease-out;
+}
+
+
+@keyframes forsind {
+    0% {
+        transform: scaleY(1);
+        /*        transform: translateY(0vw);*/
+        /*        */
+    }
+
+    100% {
+        position: fixed;
+        transform: scaleY(1);
+        opacity: 0;
+        /*        transform: translateY(-25vw)*/
+    }
+}
+
+
+.forside {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#om .beskrivelse {
+    background-color: aliceblue;
+    flex-grow: 2;
+    flex-basis: 600px;
+    padding: 1rem;
+    margin: 0;
+
+
+}
+
+#om .billede {
+    flex-grow: 1;
+    flex-basis: 400px;
+    transition: .5 ease;
+    padding: 1rem 1rem 0 1rem;
+    background-color: aliceblue;
+    /*    border: 4rem solid aliceblue;*/
+}
+
+.billede img {
+    width: 100%;
+}
+
+#splash {
+    background-image: url(grafik/background%20lys-100.jpg);
+    position: relative;
+    height: 45vw;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 1;
+}
+
+#om_titel {
+    background-image: url(grafik/om_titel.svg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 82vw;
+    height: 45vw;
+}
+
+@media screen and (max-width:712px) {
+    #om_titel {
+        display: none;
+        background-image: url(grafik/forside_titel.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 8vw;
+        left: 13.5vw;
+        width: 70vw;
+        height: 31vw;
+        z-index: 2;
+    }
+
+    #tema1_titel {
+        display: none;
+        background-image: url(grafik/forside_titel.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 8vw;
+        left: 13.5vw;
+        width: 70vw;
+        height: 31vw;
+        z-index: 2;
+    }
+
+    #tema2_titel {
+        display: none;
+        background-image: url(grafik/forside_titel.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 8vw;
+        left: 13.5vw;
+        width: 70vw;
+        height: 31vw;
+        z-index: 2;
+    }
+
+    #tema3_titel {
+        display: none;
+        background-image: url(grafik/forside_titel.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 8vw;
+        left: 13.5vw;
+        width: 70vw;
+        height: 31vw;
+        z-index: 2;
+    }
+
+    #tema4_titel {
+        display: none;
+        background-image: url(grafik/forside_titel.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 8vw;
+        left: 13.5vw;
+        width: 70vw;
+        height: 31vw;
+        z-index: 2;
+    }
+}
